@@ -25,8 +25,7 @@ It is built using **HTML** and **CSS**, designed to be responsive and user-frien
 ---
 
 ## Project Preview
-![Portfolio Screenshot](https://via.placeholder.com/600x400)  
-*(Replace with your actual screenshot)*
+file:///C:/Users/ADMIN/Desktop/small%20projects/portfolio%20website/index.html#contact
 
 ---
 
