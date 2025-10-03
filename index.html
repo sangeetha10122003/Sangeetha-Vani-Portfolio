@@ -5,63 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth; 
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            margin: 20px;
+            font-family: Arial, sans-serif;
             background-color: #eef2f7;
             color: #333;
             line-height: 1.6;
+            padding: 20px;
         }
 
         h1 {
             color: #2c3e50;
             text-align: center;
+            margin: 80px 0 20px;
         }
 
-        h2 {
+        h2.section-heading {
+            margin-top: 40px;
+            margin-bottom: 15px;
             color: #2c3e50;
             text-align: center;
-            margin-top: 40px;
-        }
-
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            font-weight: bold;
-            color: #0073e6;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
         }
 
         img {
             display: block;
             margin: 20px auto;
-            width: 250px;   /* Increased size */
-            height: 250px;  /* Fixed size for uniform look */
+            width: 250px;   
+            height: 250px;  
             border-radius: 50%;
             border: 5px solid #2c3e50;
             object-fit: cover;
         }
 
         a {
-            color: #0073e6;
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
+        /* Navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #0073e6;
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffdd57;
+            transform: scale(1.1);
         }
 
         ul,
@@ -71,33 +84,33 @@
             list-style: none;
             justify-content: center;
             padding: 0;
+            flex-wrap: wrap;
         }
 
         li {
             background: white;
-            padding: 12px 20px;
+            padding: 10px 15px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
+        /* Contact Form */
         form {
             background: #fff;
             padding: 20px;
-            border: 1px solid #ddd;
-            width: 320px;
-            margin: 20px auto;
             border-radius: 8px;
-            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         input,
         textarea,
         button {
-            width: 95%;
+            width: 100%;
             padding: 10px;
-            margin: 8px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+            margin: 5px 0;
         }
 
         button {
@@ -105,90 +118,155 @@
             color: white;
             border: none;
             cursor: pointer;
-            font-weight: bold;
+            transition: background 0.3s;
         }
 
         button:hover {
             background: #005bb5;
         }
 
-        footer {
+        #thankMessage {
             text-align: center;
-            margin-top: 40px;
-            padding: 15px;
-            background: #2c3e50;
-            color: white;
-            border-radius: 8px;
+            color: green;
+            display: none;
+            margin-top: 10px;
+        }
+
+       
+        @media (max-width: 768px) {
+            ul,
+            ol {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+
+            h1 {
+                font-size: 28px;
+                margin-top: 60px;
+            }
+
+            img {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+                margin-top: 50px;
+            }
+
+            nav {
+                padding: 10px 0;
+            }
+
+            button,
+            input,
+            textarea {
+                font-size: 14px;
+            }
+
+            img {
+                width: 180px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    
     <nav>
-        <a href="#about">About</a> |
-        <a href="#skills">Skills</a> |
-        <a href="#hobbies">Hobbies</a> |
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#hobbies">Hobbies</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Header -->
+  
     <h1>Sangeetha Vani Sureshkumar</h1>
 
-    <!-- About Section -->
-    <h2 id="about">About Me</h2>
-    <p style="text-align:center; max-width: 800px; margin: auto;">
-        A highly motivated and detail-oriented Electrical and Electronics Engineering (EEE) student with a strong
+    
+    <h2 id="about" class="section-heading">About Me</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center;">
+        A highly motivated and detail-oriented entry-level fullstack developer with a strong
         interest in Information Technology. Possess foundational knowledge in programming, data structures, and software
         development, with hands-on experience through academic projects and self-learning. Eager to apply analytical and
-        problem-solving skills in IT roles such as software development and IT support. Committed to continuous learning
+        problem-solving skills in IT roles such as software development, IT support. Committed to continuous learning
         and adapting to emerging technologies.
     </p>
 
-    <!-- Profile Image -->
     <img src="image1.jpg" alt="My Image">
 
-    <p style="text-align:center;">
+    <p style="text-align:center; margin-bottom:30px;">
         Connect with me on
         <a href="https://www.linkedin.com/in/sangeetha-vani-s-351a68311" target="_blank">LinkedIn</a>
     </p>
 
-    <!-- Skills Section -->
-    <h2 id="skills">My Skills</h2>
+    
+    <h2 id="skills" class="section-heading">My Skills</h2>
     <ul>
+        <li>Python</li>
         <li>HTML</li>
         <li>CSS</li>
-        <li>Python</li>
+        <li>Java Script</li>
     </ul>
 
-    <!-- Hobbies Section -->
-    <h2 id="hobbies">My Hobbies</h2>
+   
+    <h2 id="hobbies" class="section-heading">My Hobbies</h2>
     <ol>
         <li>Singing</li>
         <li>Playing</li>
         <li>Watching Movies</li>
     </ol>
 
-    <!-- Contact Form -->
-    <h2 id="contact">Contact Me</h2>
-    <form>
+    
+    <h2 id="contact" class="section-heading">Contact Me</h2>
+    <form id="contactForm" action="https://formspree.io/f/mgvnyrpe" method="POST">
         <label for="name">Name:</label>
-        <input id="name" type="text" placeholder="Enter your Name">
+        <input id="name" name="name" type="text" placeholder="Enter your Name" required><br><br>
 
         <label for="email">Email:</label>
-        <input id="email" type="email" placeholder="Enter your Email">
+        <input id="email" name="email" type="email" placeholder="Enter your Email" required><br><br>
 
-        <label for="message">Message:</label>
-        <textarea id="message" placeholder="Write your message here..." rows="4" cols="30"></textarea>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" placeholder="Write your message here..." rows="4" required></textarea><br><br>
 
         <button type="submit">Submit</button>
     </form>
 
-    <!-- Footer -->
-    <footer>
-        © 2025 Sangeetha Vani Sureshkumar | Built with ❤️ using HTML & CSS
-    </footer>
+    <p id="thankMessage">Thank you! Your message has been sent.</p>
+
+    <script>
+        
+        const form = document.getElementById('contactForm');
+        const thankMsg = document.getElementById('thankMessage');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        thankMsg.style.display = 'block';
+                        form.reset();
+                    } else {
+                        alert('Oops! There was a problem submitting your form.');
+                    }
+                })
+                .catch(error => {
+                    alert('Oops! There was a problem submitting your form.');
+                });
+        });
+    </script>
 
 </body>
 
