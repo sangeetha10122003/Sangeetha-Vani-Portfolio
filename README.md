@@ -32,4 +32,4 @@ file:///C:/Users/ADMIN/Desktop/small%20projects/portfolio%20website/index.html#c
 ## How to Run Locally
 1. Clone the repository:  
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/sangeetha10122003/Sangeetha-Vani-Portfolio
