@@ -21,8 +21,7 @@ It is built using **HTML** and **CSS**, designed to be responsive and user-frien
 - **HTML5** – Structure of the website  
 - **CSS3** – Styling and responsive layout
 - **js**-makes web pages interactive, dynamic, and functional
-- **Google Fonts (Poppins)** – Modern typography
--   
+- **Google Fonts (Poppins)** – Modern typography  
 
 ---
 
